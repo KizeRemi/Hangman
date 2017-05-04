@@ -47,6 +47,9 @@ Released   : 20120125
 }
 
 * {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
     margin: 0;
     padding: 0;
 }

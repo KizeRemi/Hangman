@@ -6,6 +6,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use AppBundle\Entity\Contact;
+use AppBundle\Form\ContactType;
 
 class GameController extends Controller
 {
@@ -55,5 +57,21 @@ class GameController extends Controller
     public function resetAction(Request $request)
     {
         return new Response("Ok");
+    }
+
+    /**
+     * @Route("/game/contact", name="game_contact")
+     */
+    public function contactAction(Request $request)
+    {
+        $contact = new Contact();
+        $form = $this->createForm(ContactType::class, $contact);
+        $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()){
+            $this->addFlash('notice','Votre message a été envoyé.');
+        }
+        return $this->render('game/contact.html.twig',array(
+            'form' => $form->createView()
+            ));
     }
 }

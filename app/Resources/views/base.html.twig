@@ -4,6 +4,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>{% block title %}Hangman Game - You're hanged!{% endblock %}</title>
+    
+    <link rel="stylesheet" type="text/css" href={{ asset("css/bootstrap.css") }} />
     <link rel="stylesheet" type="text/css" href={{ asset("css/style.css") }} />
     <link rel="shortcut icon" href="/favicon.ico" />
 </head>
@@ -27,7 +29,7 @@
                     <a href="{{ path('game_signin') }}">{{ 'menu.login'|trans }}</a>
                 </li>
                 <li>
-                    <a href="#">{{ 'menu.contact'|trans }}</a>
+                    <a href="{{ path('game_contact') }}">{{ 'menu.contact'|trans }}</a>
                 </li>
             </ul>
             <br class="clearfix" />
@@ -36,11 +38,11 @@
 
     <div id="page">
         <div id="content">
-            <div class="breadcrumb">
-                <a href="{{ path('game_signin') }}"></a>
-                <a href="{{ path('game_game') }}"></a>
-                <a href="{{ path('game_won') }}"></a>
-            </div>
+            {% for flash_message in app.session.flashBag.get('notice') %}
+                <div class="flash-notice">
+                    {{ flash_message }}
+                </div>
+            {% endfor %}
             {% block body %}
             {% endblock %}
         </div>

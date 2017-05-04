@@ -21,6 +21,22 @@
         <source>menu.contact</source>
         <target>Contact</target>
       </trans-unit>
+      <trans-unit id="2fd59920b1e1f67f4620dd4d6ab7c5b3" resname="form.label.sender">
+        <source>form.label.sender</source>
+        <target>Sender</target>
+      </trans-unit>
+      <trans-unit id="1fd59920b1e1f67f4620dd4d6ab7c5b3" resname="form.label.subject">
+        <source>form.label.subject</source>
+        <target>Subject</target>
+      </trans-unit>
+      <trans-unit id="3fd59920b1e1f67f4620dd4d6ab7c5b3" resname="form.label.description">
+        <source>form.label.description</source>
+        <target>Description</target>
+      </trans-unit>
+      <trans-unit id="4fd59920b1e1f67f4620dd4d6ab7c5b3" resname="form.label.send">
+        <source>form.label.send</source>
+        <target>Send</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

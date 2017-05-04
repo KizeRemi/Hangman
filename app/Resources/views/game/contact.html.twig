@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}	
+Hangman Game - Contact
+{% endblock %}
+
+{% import "macros.html.twig" as bread %}
+
+{% block body %}
+	{{ bread.breadcrumb({'game_signin': 'Homepage', 'game_game': 'Game', 'game_contact' : 'Contact'}) }}
+
+    <p>
+        Contacter le support.
+    </p>
+    {{ form_start(form) }}
+
+    {{ form_end(form) }}
+{% endblock %}

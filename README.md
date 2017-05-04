@@ -7,5 +7,7 @@ En cours de réalisation.
 Actuellement:
 - Routing
 - Macros twig
-- Traductions fr
-
+- Traductions (messages et validators)
+- message flash
+- validation
+- formulaire

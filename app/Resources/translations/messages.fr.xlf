@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file source-language="fr" target-language="fr" datatype="plaintext" original="file.ext">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
     <header>
       <tool tool-id="symfony" tool-name="Symfony"/>
     </header>
@@ -20,6 +20,22 @@
       <trans-unit id="9fd59920b1e1f67f4620dd4d6ab7c5b3" resname="menu.contact">
         <source>menu.contact</source>
         <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="2fd59920b1e1f67f4620dd4d6ab7c5b3" resname="form.label.sender">
+        <source>form.label.sender</source>
+        <target>Expéditeur</target>
+      </trans-unit>
+      <trans-unit id="1fd59920b1e1f67f4620dd4d6ab7c5b3" resname="form.label.subject">
+        <source>form.label.subject</source>
+        <target>Sujet</target>
+      </trans-unit>
+      <trans-unit id="3fd59920b1e1f67f4620dd4d6ab7c5b3" resname="form.label.description">
+        <source>form.label.description</source>
+        <target>Description</target>
+      </trans-unit>
+      <trans-unit id="4fd59920b1e1f67f4620dd4d6ab7c5b3" resname="form.label.send">
+        <source>form.label.send</source>
+        <target>Envoyer</target>
       </trans-unit>
     </body>
   </file>
