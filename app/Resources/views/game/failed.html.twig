@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}	
+Hangman Game - You're hanged!
+{% endblock %}
+
+{% import "macros.html.twig" as bread %}
+
+{% block body %}
+	{{ bread.breadcrumb({'game_signin': 'Homepage', 'game_game': 'Game', 'game_failed' : 'Failed'}) }}
+    <p>
+        Oops, you're hanged... The word to guess was <strong>xilophon</strong>.
+    </p>
+{% endblock %}

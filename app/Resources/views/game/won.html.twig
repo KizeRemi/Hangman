@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}	
+Hangman Game - You won!
+{% endblock %}
+
+{% import "macros.html.twig" as bread %}
+
+{% block body %}
+		{{ bread.breadcrumb({'game_signin': 'Homepage', 'game_game': 'Game', 'game_won' : 'Won'}) }}
+        <h2>Congratulations!</h2>
+        <p>
+            You found the word <strong>software</strong> and won this game.
+        </p>
+{% endblock %}

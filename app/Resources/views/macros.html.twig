@@ -1,0 +1,10 @@
+{% macro breadcrumb(items) %}
+    <div class="breadcrumb">
+    	{% for routeName, routeLabel in items %}
+        	<a href="{{ path(routeName) }}">{{routeLabel}}</a>
+        	{% if not loop.last %}
+        		>
+        	{% endif %}
+    	{% endfor %}
+    </div>
+{% endmacro %}
