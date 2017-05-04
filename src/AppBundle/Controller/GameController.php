@@ -68,6 +68,7 @@ class GameController extends Controller
         $form = $this->createForm(ContactType::class, $contact);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
+            $contactMail = $this->get('app.contact_mail')->sendEmail($contact);
             $this->addFlash('notice','Votre message a été envoyé.');
         }
         return $this->render('game/contact.html.twig',array(
